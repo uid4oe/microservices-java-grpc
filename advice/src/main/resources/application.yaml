@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 5
+    driver-class-name: org.postgresql.Driver
+    url: ${POSTGRES_URL}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: true
+grpc:
+  server:
+    port: 50251
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/oe
+    username: oe
+    password: oe
+  config:
+    activate:
+      on-profile: develop

@@ -1,0 +1,21 @@
+server:
+  port: 8100
+grpc:
+  client:
+    user:
+      address: ${USER_GRPC_URL_JV}
+      negotiationType: PLAINTEXT
+    advice:
+      address: ${ADVICE_GRPC_URL_JV}
+      negotiationType: PLAINTEXT
+---
+spring:
+  config:
+    activate:
+      on-profile: develop
+grpc:
+  client:
+    user:
+      address: static://localhost:50250
+    advice:
+      address: static://localhost:50251

@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+grpc:
+  server:
+    port: 50250
+---
+spring:
+  data:
+    mongodb:
+      uri: mongodb://oe:oe@localhost:27017/oe
+  config:
+    activate:
+      on-profile: develop

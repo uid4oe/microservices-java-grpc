@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package advicepb;
+
+import "google/protobuf/timestamp.proto";
+
+message GetUserAdviceRequest{
+    string user_id = 1;
+}
+
+message GetUserAdviceResponse{
+    string advice = 1;
+    google.protobuf.Timestamp created_at = 2; 
+}
+
+message CreateUpdateAdviceRequest{
+    string user_id = 1;
+    string advice = 2;
+}
+
+message CreateUpdateAdviceResponse{
+
+}
+
+
+service AdviceService{
+    rpc GetAdvice(GetUserAdviceRequest) returns (GetUserAdviceResponse) {};
+    rpc CreateUpdateAdvice(CreateUpdateAdviceRequest) returns (CreateUpdateAdviceResponse) {};
+}
