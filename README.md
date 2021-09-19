@@ -1,10 +1,15 @@
 # Microservices Java gRPC
 
-[Deployed in EC2, Check it out!](http://ec2-18-192-156-217.eu-central-1.compute.amazonaws.com/java)
+[Only the Go Version is deploy, due to EC2 bills :)](https://go-grpc.uid4oe.dev)
+You can run images locally.
 
 This repo contains microservices written in Java with BFF pattern for performing CRUD operations. 
-- [For Kotlin version, click me!](https://github.com/uid4oe/microservices-kotlin-grpc/)
-- [For Go version, click me!](https://github.com/uid4oe/microservices-go-grpc/)
+
+Only the Go Version is deploy, due to EC2 bills :) You can run images locally.
+
+See also
+- [Kotlin version](https://github.com/uid4oe/microservices-kotlin-grpc/)
+- [Go version](https://github.com/uid4oe/microservices-go-grpc/)
 
 
 ![](./jv.png)
